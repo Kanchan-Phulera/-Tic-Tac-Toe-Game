@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+.status {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 12px;
+  margin: 20px auto;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background: #f3f4f6;
+  border-radius: 12px;
+  font-size: 42px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.cell:hover {
+  background: #e0e7ff;
+  transform: scale(1.05);
+}
+
+.cell.X {
+  color: #2563eb;
+}
+
+.cell.O {
+  color: #dc2626;
+}
+
+.cell.win {
+  background: #a5b4fc;
+  color: white;
+}
+
+#message {
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+button {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #facc15, #fb7185);
+  cursor: pointer;
+  font-weight: 600;
+}
